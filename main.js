@@ -1,23 +1,33 @@
-
-
-const Clients = {
-    id: "4",
-    nome: "lucas",
-    email: "lucas@gmail.com",
+const Clients = { 
+    id: "5",
+    nome: "m",
+    email: "m@gmail.com",
     idade: "22",
     senha: "1234"
 }
 
-//create 
+const getStorage = () => JSON.parse(localStorage.getItem("dados")) ?? [];
+const setStorage = (dados) => localStorage.setItem("dados", JSON.stringify(dados)) ;
 
+//create 
 const createClient = (client) => {
-     const dados = JSON.parse(localStorage.getItem('client')) ?? [] ;
+     const dados = getStorage();
      dados.push(client);
-     localStorage.setItem('client', JSON.stringify(dados));
+     setStorage(dados);
 };
 
 //read
+const readClient = () => getStorage() ;
 
-const readClient = () => localStorage.getItem('client') 
-
-
+//update
+const updateClient = (index, client) => {
+    const dados = readClient();
+    dados[index] = client;
+    setStorage(dados);
+}
+//delete
+const deleteClient = (index) => {
+    const dados = readClient();
+    dados.slice(index, 1)
+    setStorage(dados);
+}
