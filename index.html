@@ -9,64 +9,29 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <h3>
-                    CRUD Básico
-                    <small class="text-muted">Meu primeiro sistema crud</small>
-                </h3>
-            </div>
-        </div>
 
-        <div class="row" style="margin-top: 10px">
-            <div class="col-md-12">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-
-                <button type="button" class="btn btn-primary float-right">Adicionar Usuário</button>
-               
-                </div>
-            </div>
-        </div>
-
-        <div class="row" style="margin-top:10px">
-            <div class="col-md-12">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">First</th>
-                          <th scope="col">Last</th>
-                          <th scope="col">Handle</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td colspan="2">Larry the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                </table>
-
-            </div>
-
-        </div>
-
+  <div class="container mt-5">
+    <div class="text-center">
+      <h1>CRUD</h1>
     </div>
+
+    <form id="add-form">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Digite seu Nome</label>
+        <input id="nome" name="nome"type="text" class="form-control"  >
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="senha" name="senha">
+      </div>
+      <button onclick="pegarDados()"  id="add-usuario" class="btn btn-primary">Adicionar</button>
+    </form>
+
+  </div>
    
     
 
@@ -74,5 +39,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
