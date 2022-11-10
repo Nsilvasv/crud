@@ -1,4 +1,4 @@
-const Clients = { 
+/*const Clients = { 
     id: "5",
     nome: "m",
     email: "m@gmail.com",
@@ -30,4 +30,4 @@ const deleteClient = (index) => {
     const dados = readClient();
     dados.slice(index, 1)
     setStorage(dados);
-}
+}*/
